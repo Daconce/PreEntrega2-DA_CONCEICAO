@@ -12,8 +12,10 @@
 
 <body>
     <nav>
-        <img src="../public/logo_rincon_norteno.webp" alt="logo" />
-        <ul>
+        <a href="../index.html">
+            <img src="../public/logo_rincon_norteno.webp" alt="logo" />
+        </a>
+        <ul class="navbar" id="navbar">
             <li><a href="../index.html">Home</a></li>
             <li><a href="./productos.html">Productos</a></li>
             <li><a href="./sucursales.html">Sucursales</a></li>
@@ -21,8 +23,14 @@
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
+    <div class="hamburger-icon" onclick="showMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
     <main>
         <section class="form-container">
+            <h1>Dejá tu mensaje:</h1>
             <form action="" id="contacto" autocomplete="off">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name">
@@ -44,6 +52,17 @@
             <img src="../public/instagram-logo.svg" alt="link instagram" height="32px" width="32px">
         </a>
     </footer>
+
+    <script>
+        function showMenu() {
+            var element = document.getElementById("navbar");
+            if (element.className === "navbar") {
+                element.className += "responsive";
+            } else {
+                element.className = "navbar";
+            }
+        }
+    </script>
 </body>
 
 </html>

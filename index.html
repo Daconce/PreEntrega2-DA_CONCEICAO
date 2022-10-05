@@ -13,7 +13,7 @@
 <body>
     <nav>
         <img src="./public/logo_rincon_norteno.webp" alt="logo" />
-        <ul>
+        <ul class="navbar" id="navbar">
             <li><a href="#">Home</a></li>
             <li><a href="./pages/productos.html">Productos</a></li>
             <li><a href="./pages/sucursales.html">Sucursales</a></li>
@@ -21,10 +21,16 @@
             <li><a href="./pages/contacto.html">Contacto</a></li>
         </ul>
     </nav>
+    <div class="hamburger-icon" onclick="showMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
     <main>
         <video width="100%" autoplay muted loop>
             <source src="./public/video_producto.mp4" type="video/mp4">
         </video>
+        <h1>Cocina auténtica de nuestro país.</h1>
         <section class="galeria">
             <img class="fot-a" src="./public/empanadas2.jpg" alt="empanadas">
             <img class="fot-b" src="./public/empanadas3.jpg" alt="empanadas">
@@ -43,6 +49,17 @@
             <img src="./public/instagram-logo.svg" alt="link instagram" height="32px" width="32px">
         </a>
     </footer>
+
+    <script>
+        function showMenu() {
+            var element = document.getElementById("navbar");
+            if (element.className === "navbar") {
+                element.className += "responsive";
+            } else {
+                element.className = "navbar";
+            }
+        }
+    </script>
 </body>
 
 </html>
