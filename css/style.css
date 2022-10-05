@@ -51,6 +51,7 @@ nav {
 
 main{
     margin-top: 95px;
+    min-height: 75vh;
 }
 
     main h1{
